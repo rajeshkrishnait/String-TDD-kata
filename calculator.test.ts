@@ -13,4 +13,8 @@ describe('test calcultor', ()=>{
     test('allow new line format with \n', ()=>{
         expect(add('1,4\n4')).toBe(9)
     })
+    test('supports custom delimeters', ()=>{
+        expect(add('//;1;2')).toBe(3)
+        expect(add('//|1|2')).toBe(3)
+    })
 })
