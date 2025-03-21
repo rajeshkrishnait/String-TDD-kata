@@ -1,7 +1,7 @@
 export function add(numbers:string){
     if(!numbers)
         return 0
-    let delimeter = ','
+    let delimeter = /,|\n/
     let numbersArray = numbers.split(delimeter).map(Number)
     let sum = 0;
     if(numbersArray.length == 1)
