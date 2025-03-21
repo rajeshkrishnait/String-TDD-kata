@@ -1,4 +1,4 @@
-import {add} from './StringCalculator.ts'
+import {add} from './StringCalculator'
 
 describe('test calcultor', ()=>{
     test('Empty string returns 0', ()=>{
