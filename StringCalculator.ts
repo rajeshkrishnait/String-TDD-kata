@@ -18,7 +18,8 @@ export function add(numbers:string){
         throw new Error(`negative numbers not allowed ${negatives.join(",")}`)
     }
     numbersArray.forEach((number)=>{
-        sum+=number
+        if(!(number>1000))
+            sum+=number
     })
     return sum;
 }
