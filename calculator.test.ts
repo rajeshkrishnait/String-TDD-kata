@@ -20,4 +20,9 @@ describe('test calcultor', ()=>{
     test("throws an error for negative numbers", () => {
         expect(() => add("1,-2,3,-4")).toThrow("negative numbers not allowed -2,-4");
     });
+    test('numbers bigger than 1000 should be ignored', ()=>{
+        expect(add('1, 1001')).toBe(1)
+        expect(add('1,\n 1001')).toBe(1)
+        expect(add('//;\n1; 1001')).toBe(1)
+    })
 })
