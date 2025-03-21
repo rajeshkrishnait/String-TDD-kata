@@ -15,6 +15,6 @@ describe('test calcultor', ()=>{
     })
     test('supports custom delimeters', ()=>{
         expect(add('//;\n1;2')).toBe(3)
-        expect(add('//|\n1|2')).toBe(3)
+        expect(add('//]\n1]2')).toBe(3)
     })
 })
