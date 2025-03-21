@@ -13,7 +13,10 @@ export function add(numbers:string){
     let sum = 0;
     if(numbersArray.length == 1)
         return numbersArray[0]
-
+    const negatives = numbersArray.filter(num => num < 0);
+    if(negatives.length > 0){
+        throw new Error(`negative numbers not allowed ${negatives.join(",")}`)
+    }
     numbersArray.forEach((number)=>{
         sum+=number
     })
